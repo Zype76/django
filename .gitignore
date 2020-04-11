@@ -4,3 +4,4 @@
 *.pyc
 __pycache__/
 selfservice/migrations/*
+mysite/dbcreds.py

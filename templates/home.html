@@ -3,6 +3,8 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
+<div>
+{% if user.is_authenticated %}
   <h2>Home</h2>
 <form method="POST" action="/selfservice/search/">
 {% csrf_token %}
@@ -10,5 +12,6 @@
 
 <button type="submit">Upload text</button>
 </form>
-
+{% endif %}
+</div>
 {% endblock %}

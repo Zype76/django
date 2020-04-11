@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
+
+from .dbcreds import *
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -78,9 +80,9 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'REDACTED',
-        'USER': 'REDACTED',
-        'PASSWORD': 'REDACTED',
+        'NAME': dbname,
+        'USER': dbuser,
+        'PASSWORD': dbpass,
         'HOST': 'localhost',
         'PORT': '',
     }
